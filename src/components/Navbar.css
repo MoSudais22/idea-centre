@@ -1,0 +1,237 @@
+.topBar {
+  background: #ffffff;
+  padding: 10px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e8e8e8;
+}
+.logoWrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.siteLogo{
+  height:70px;
+  width:auto;
+  object-fit:contain;
+}
+
+
+.puzzleGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  width: 50px;
+  height: 50px;
+}
+.piece {
+  width: 23px;
+  height: 23px;
+}
+.logoIdea {
+  font-size: 22px;
+  font-weight: 800;
+  font-style: italic;
+  color: #4ab5d4;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+}
+.logoCentre {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: 1px;
+}
+.topRight{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:8px;
+}
+.topActions{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.iconCircle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #3a8fa8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+}
+.iconCircle:hover {
+  background: #2a7a93;
+}
+.memberBtn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.memberAvatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #f4a62a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.memberLabel {
+  font-size: 13px;
+  color: #2a2a2a;
+  font-weight: 500;
+}
+.socialRow {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.soc {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.soc:hover {
+  opacity: 0.85;
+}
+.navBar {
+  background: #2a8a72;
+  padding: 0 32px;
+  display: flex;
+  justify-content: center;
+  min-height: 65px; /* navbar height */
+  align-items: center;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  color: rgba(255, 255, 255, 0.92);
+
+  font-size: 15px;   /* text bigger */
+  font-weight: 600;  /* text bold */
+
+  padding: 0 20px;
+  height: 65px;
+
+  display: flex;
+  align-items: center;
+
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.navLink:hover {
+  background: rgba(255,255,255,0.12);
+  color: #ffffff;
+}
+
+.navLinkActive {
+  background: rgba(255,255,255,0.18);
+  color: #ffffff;
+  font-weight: 700;
+}
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.mobileMenu {
+  background: #2a8a72;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 24px 16px;
+}
+.mobileLink {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 14px;
+  padding: 10px 0;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.15);
+  text-decoration: none;
+}
+.mobileLink:hover {
+  color: #ffffff;
+}
+.mobileLinkActive {
+  color: #ffffff;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .topBar { padding: 10px 16px; }
+  .navBar { display: none; }
+  .hamburger { display: block; }
+  .socialRow { display: none; }
+  .memberLabel { display: none; }
+}
+.navItem {
+  position: relative;
+}
+
+.dropArrow {
+  margin-left: 4px;
+  font-size: 10px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  min-width: 180px;
+  border-top: 3px solid #f4a62a;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  z-index: 999;
+  animation: fadeDown 0.18s ease;
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.dropItem {
+  display: block;
+  padding: 10px 16px;
+  font-size: 13px;
+  color: #2a2a2a;
+  text-decoration: none;
+  border-bottom: 0.5px solid #f0f0f0;
+  transition: background 0.15s, color 0.15s;
+}
+
+.dropItem:last-child {
+  border-bottom: none;
+}
+
+.dropItem:hover {
+  background: #f0faf6;
+  color: #1a6b5a;
+  padding-left: 20px;
+}

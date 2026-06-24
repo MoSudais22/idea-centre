@@ -1,0 +1,141 @@
+.programmesSection{
+  background:#fff;
+  padding:48px 40px;
+}
+
+.sectionHeader{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-bottom:32px;
+  position:relative;
+}
+
+.sectionHeader h2{
+  font-size:42px;
+  font-weight:700;
+  color:#1a1a1a;
+}
+
+.allBtn{
+  background:#2a8a72;
+  color:white;
+  border:none;
+  padding:8px 18px;
+  border-radius:30px;
+  font-size:15px;
+  cursor:pointer;
+
+  position:absolute;
+  right:0;
+  top:6px;
+}
+
+.allBtn:hover{
+  background:#1a6b5a;
+}
+
+.progGrid{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  gap:18px;
+}
+
+.progCard{
+  text-align:center;
+}
+
+.cardImageBox{
+  border-radius:14px;
+  width:100%;
+  aspect-ratio:1/1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:16px;
+  overflow:hidden;
+}
+
+.cardImageBox img{
+  width:85%;
+  height:85%;
+  object-fit:contain;
+}
+
+.cardTitle{
+  font-size:18px;
+  font-weight:700;
+  line-height:1.5;
+  min-height:90px;
+  margin-bottom:12px;
+}
+
+.cardList{
+  list-style:none;
+  padding:0;
+  margin:0 0 12px;
+  border-top:1px solid #e5e5e5;
+}
+
+.cardList li{
+  font-size:16px;
+  color:#555;
+  padding:14px 6px;
+  border-bottom:1px solid #e5e5e5;
+  line-height:1.5;
+}
+
+.cardList li:last-child{
+  border-bottom:none;
+}
+
+.moreBtn{
+  background:#2a8a72;
+  color:white;
+  border:none;
+  width:120px;
+  padding:10px;
+  border-radius:6px;
+  cursor:pointer;
+  font-size:15px;
+
+  display:block;
+  margin:auto;
+  transition:.3s;
+}
+
+.moreBtn:hover{
+  background:#1a6b5a;
+}
+
+@media(max-width:1024px){
+
+.progGrid{
+grid-template-columns:repeat(4,1fr);
+}
+
+}
+
+@media(max-width:640px){
+
+.programmesSection{
+padding:32px 16px;
+}
+
+.progGrid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.sectionHeader h2{
+font-size:30px;
+}
+
+.cardTitle{
+font-size:16px;
+}
+
+.cardList li{
+font-size:14px;
+}
+
+}
